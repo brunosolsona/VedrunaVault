@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "311430032997",
+    "firebase_url": "https://register-4331f-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "register-4331f",
+    "storage_bucket": "register-4331f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:311430032997:android:8f75b36edb96c762f7208c",
+        "android_client_info": {
+          "package_name": "com.example.passmanager"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQJPo6jpOhZaAqpkab-n4eXL6Il_y08Z8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">passmanager</string>
+    <string name="textoLista"> Sus contraseñas son:</string>
+</resources>
