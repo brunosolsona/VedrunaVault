@@ -41,11 +41,11 @@ class create_password : AppCompatActivity() {
             Toast.makeText(this, "Faltan campos por rellenar", Toast.LENGTH_SHORT).show()
             return
         } else {
-            val idPass = db2.push().key!!
+            // val idPass = db2.push().key!!
 
             val appsStruct = StructApps(appName,appPassword)
 
-            db2.child(idPass).setValue(appsStruct).addOnCompleteListener  {
+            db2.child(appName).setValue(appsStruct).addOnCompleteListener  {
                 Log.d("Firebase", "Datos insertados")
                 Toast.makeText(this, "Datos insertados",Toast.LENGTH_LONG).show()
 
