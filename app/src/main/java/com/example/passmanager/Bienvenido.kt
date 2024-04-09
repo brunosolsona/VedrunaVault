@@ -1,5 +1,6 @@
 package com.example.passmanager
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -17,8 +18,9 @@ import com.google.firebase.database.ValueEventListener
 class Bienvenido : AppCompatActivity() {
     private lateinit var usuariosRecyclerView: RecyclerView
     private lateinit var usuariosAdapter: UsuariosAdapter
+    private lateinit var usuariosAdapter2: UsuariosAdapter
     private lateinit var database: DatabaseReference
-    private lateinit var database2: DatabaseReference
+    // private lateinit var database2: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,11 +29,11 @@ class Bienvenido : AppCompatActivity() {
         val nombreUsuario = intent.getStringExtra("NOMBRE_USUARIO")
         val txtSaludo = findViewById<TextView>(R.id.txtSaludo)
         val BtnCrearPass = findViewById<FloatingActionButton>(R.id.floatingActionButton)
-        txtSaludo.text = "¡Hola, $nombreUsuario!"
 
+        txtSaludo.text = "¡Hola, $nombreUsuario!"
         usuariosRecyclerView = findViewById(R.id.recyclerViewUsuarios)
         usuariosRecyclerView.layoutManager = LinearLayoutManager(this)
-        usuariosRecyclerView.setHasFixedSize(true) // Si sabes que el contenido no va a cambiar el tamaño del RecyclerView
+        // usuariosRecyclerView.setHasFixedSize(true) // Si sabes que el contenido no va a cambiar el tamaño del RecyclerView
 
         // Inicializar Firebase Database
         database = FirebaseDatabase.getInstance().getReference("apps_$nombreUsuario")
@@ -44,7 +46,7 @@ class Bienvenido : AppCompatActivity() {
                     val usuario = usuarioSnapshot.getValue(StructApps::class.java)
                     usuario?.let { passList.add(it) }
                 }
-                usuariosAdapter = UsuariosAdapter(passList)
+                usuariosAdapter = UsuariosAdapter(passList, nombreUsuario ?: "")
                 usuariosRecyclerView.adapter = usuariosAdapter
             }
             override fun onCancelled(databaseError: DatabaseError) {
