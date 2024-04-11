@@ -25,12 +25,6 @@ class UpdateData : AppCompatActivity() {
 
             updateData(appName, appPassword)
         }
-
-        binding.deleteButton.setOnClickListener {
-            val appName = binding.appName.text.toString()
-
-            deleteData(appName)
-        }
     }
 
     private fun updateData(appName: String, appPassword: String) {
@@ -43,7 +37,7 @@ class UpdateData : AppCompatActivity() {
             "appPassword" to appPassword
         )
 
-        database.updateChildren(app).addOnSuccessListener {
+        database.child(appName).updateChildren(app).addOnSuccessListener {
             binding.appName.text.clear()
             binding.appPassword.text.clear()
             Toast.makeText(this, "Success",Toast.LENGTH_LONG).show()
@@ -53,22 +47,6 @@ class UpdateData : AppCompatActivity() {
             startActivity(intent)
         }.addOnFailureListener {
             Toast.makeText(this, "Failed",Toast.LENGTH_LONG).show()
-        }
-    }
-
-    private fun deleteData(appName: String) {
-        val nombreUsuario = intent.getStringExtra("NOMBRE_USUARIO")
-        database = FirebaseDatabase.getInstance().getReference("apps_$nombreUsuario")
-
-        database.child(appName).removeValue().addOnSuccessListener {
-            binding.appName.text.clear()
-            Toast.makeText(this,"$appName",Toast.LENGTH_LONG).show()
-
-            val intent = Intent(this@UpdateData, Bienvenido::class.java)
-            intent.putExtra("NOMBRE_USUARIO", nombreUsuario)
-            startActivity(intent)
-        }.addOnFailureListener {
-            Toast.makeText(this,"Nigger2",Toast.LENGTH_LONG).show()
         }
     }
 }

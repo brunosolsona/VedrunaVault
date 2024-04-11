@@ -18,7 +18,7 @@ import com.google.firebase.database.ValueEventListener
 class Bienvenido : AppCompatActivity() {
     private lateinit var usuariosRecyclerView: RecyclerView
     private lateinit var usuariosAdapter: UsuariosAdapter
-    private lateinit var usuariosAdapter2: UsuariosAdapter
+    // private lateinit var usuariosAdapter2: UsuariosAdapter
     private lateinit var database: DatabaseReference
     // private lateinit var database2: DatabaseReference
 
@@ -29,6 +29,7 @@ class Bienvenido : AppCompatActivity() {
         val nombreUsuario = intent.getStringExtra("NOMBRE_USUARIO")
         val txtSaludo = findViewById<TextView>(R.id.txtSaludo)
         val BtnCrearPass = findViewById<FloatingActionButton>(R.id.floatingActionButton)
+        val BtnDeleteEntry = findViewById<FloatingActionButton>(R.id.floatingActionDeleteButton)
 
         txtSaludo.text = "¡Hola, $nombreUsuario!"
         usuariosRecyclerView = findViewById(R.id.recyclerViewUsuarios)
@@ -55,10 +56,16 @@ class Bienvenido : AppCompatActivity() {
         })
 
         BtnCrearPass.setOnClickListener {
-            val intent2 = Intent(this@Bienvenido, UpdateData::class.java)
+            val intent = Intent(this@Bienvenido, UpdateData::class.java)
+            intent.putExtra("NOMBRE_USUARIO", nombreUsuario)
+            startActivity(intent)
+        }
+        // Toast.makeText(this,"Error de base de datos, $usuariosAdapter, $usuariosRecyclerView",Toast.LENGTH_LONG).show()
+
+        BtnDeleteEntry.setOnClickListener {
+            val intent2 = Intent(this@Bienvenido, DeleteData::class.java)
             intent2.putExtra("NOMBRE_USUARIO", nombreUsuario)
             startActivity(intent2)
         }
-        // Toast.makeText(this,"Error de base de datos, $usuariosAdapter, $usuariosRecyclerView",Toast.LENGTH_LONG).show()
     }
 }
