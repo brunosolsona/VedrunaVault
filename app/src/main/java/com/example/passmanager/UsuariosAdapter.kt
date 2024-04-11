@@ -21,8 +21,7 @@ class UsuariosAdapter(private val usuariosList: List<StructApps>, private val no
     class UsuarioViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val AppTextView: TextView = view.findViewById(R.id.nombreTextView)
         val PassTextView: TextView = view.findViewById(R.id.correoTextView)
-        val Btn_EditEntries: Button = view.findViewById(R.id.editData)
-
+        // val Btn_EditEntries: Button = view.findViewById(R.id.editData)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UsuarioViewHolder {
@@ -34,11 +33,11 @@ class UsuariosAdapter(private val usuariosList: List<StructApps>, private val no
         val usuario = usuariosList[position]
         holder.AppTextView.text = usuario.appName
         holder.PassTextView.text = usuario.appPassword
-        holder.Btn_EditEntries.setOnClickListener { v ->
-            val intent = Intent(v.context, UpdateData::class.java)
-            intent.putExtra("NOMBRE_USUARIO", nombreUsuario)
-            v.context.startActivity(intent)
-        }
+        // holder.Btn_EditEntries.setOnClickListener { v ->
+        //    val intent = Intent(v.context, UpdateData::class.java)
+        //    intent.putExtra("NOMBRE_USUARIO", nombreUsuario)
+        //    v.context.startActivity(intent)
+        // }
     }
 
     override fun getItemCount() = usuariosList.size

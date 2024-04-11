@@ -55,7 +55,7 @@ class Bienvenido : AppCompatActivity() {
         })
 
         BtnCrearPass.setOnClickListener {
-            val intent2 = Intent(this@Bienvenido, create_password::class.java)
+            val intent2 = Intent(this@Bienvenido, UpdateData::class.java)
             intent2.putExtra("NOMBRE_USUARIO", nombreUsuario)
             startActivity(intent2)
         }
