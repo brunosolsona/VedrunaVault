@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Estado cuando el CardView está presionado -->
+    <item android:state_pressed="true" android:drawable="@color/colorPressed" />
+    <!-- Estado predeterminado -->
+    <item android:drawable="@android:color/white" />
+</selector>

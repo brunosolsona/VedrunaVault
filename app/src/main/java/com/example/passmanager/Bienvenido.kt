@@ -29,7 +29,6 @@ class Bienvenido : AppCompatActivity() {
         val nombreUsuario = intent.getStringExtra("NOMBRE_USUARIO")
         val txtSaludo = findViewById<TextView>(R.id.txtSaludo)
         val BtnCrearPass = findViewById<FloatingActionButton>(R.id.floatingActionButton)
-        val BtnDeleteEntry = findViewById<FloatingActionButton>(R.id.floatingActionDeleteButton)
 
         txtSaludo.text = "¡Hola, $nombreUsuario!"
         usuariosRecyclerView = findViewById(R.id.recyclerViewUsuarios)
@@ -56,16 +55,10 @@ class Bienvenido : AppCompatActivity() {
         })
 
         BtnCrearPass.setOnClickListener {
-            val intent = Intent(this@Bienvenido, UpdateData::class.java)
+            val intent = Intent(this@Bienvenido, create_password::class.java)
             intent.putExtra("NOMBRE_USUARIO", nombreUsuario)
             startActivity(intent)
         }
         // Toast.makeText(this,"Error de base de datos, $usuariosAdapter, $usuariosRecyclerView",Toast.LENGTH_LONG).show()
-
-        BtnDeleteEntry.setOnClickListener {
-            val intent2 = Intent(this@Bienvenido, DeleteData::class.java)
-            intent2.putExtra("NOMBRE_USUARIO", nombreUsuario)
-            startActivity(intent2)
-        }
     }
 }
