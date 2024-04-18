@@ -14,13 +14,13 @@ class MainActivity : AppCompatActivity() {
         val clickLogin:Button = findViewById(R.id.Login)
         val clickRegister:Button = findViewById(R.id.register)
         clickLogin.setOnClickListener{
-            val intent= Intent(this@MainActivity,Login::class.java)
+            val intent= Intent(this@MainActivity,TestLogin::class.java)
             Toast.makeText(applicationContext,"Login", Toast.LENGTH_SHORT).show()
             startActivity(intent)
 
         }
         clickRegister.setOnClickListener{
-            val intent= Intent(this@MainActivity,Registro::class.java)
+            val intent= Intent(this@MainActivity,TestRegister::class.java)
             Toast.makeText(applicationContext,"Register", Toast.LENGTH_SHORT).show()
             startActivity(intent)
         }

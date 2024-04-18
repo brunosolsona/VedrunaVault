@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">passmanager</string>
     <string name="textoLista"> Sus contraseñas son:</string>
+    <string name="email">Email</string>
+    <string name="required">Requerido</string>
+    <string name="password">Contraseña</string>
+    <string name="submit">Enviar</string>
 </resources>
