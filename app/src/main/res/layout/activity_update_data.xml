@@ -4,14 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UpdateData">
+    tools:context=".UpdateData"
+    android:background="@color/lavanda">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.027"
+        app:srcCompat="@drawable/ic_launcher_round"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/cajaLogin"
+        android:layout_width="340dp"
+        android:layout_height="88dp"
+        android:fontFamily="@font/facebook"
+        android:text="Edita tu Contraseña"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.264" />
 
     <EditText
         android:id="@+id/appName"
         android:layout_width="253dp"
         android:layout_height="50dp"
         android:ems="10"
-        android:hint="App Name"
+        android:hint="Nombre de la App"
+        android:textColorHint="@color/gris_claro"
+        android:fontFamily="@font/facebook"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,7 +57,9 @@
         android:layout_width="253dp"
         android:layout_height="50dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="Contraseña"
+        android:textColorHint="@color/gris_claro"
+        android:fontFamily="@font/facebook"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,22 +72,31 @@
         android:id="@+id/updateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Edit Password"
+        android:backgroundTint="@color/azul_oscuro"
+        android:fontFamily="@font/facebook"
+        android:text="Guardar Contraseña"
+        android:textColor="@color/white"
+        android:textColorLink="#4A4FD3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.645" />
+        app:layout_constraintVertical_bias="0.613" />
 
     <Button
         android:id="@+id/deleteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Delete Password"
+        android:backgroundTint="@color/azul_oscuro"
+        android:fontFamily="@font/facebook"
+        android:text="Eliminar Contraseña"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.759" />
+        app:layout_constraintVertical_bias="0.727" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

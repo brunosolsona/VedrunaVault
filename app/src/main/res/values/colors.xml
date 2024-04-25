@@ -4,4 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="azul">#00B0FF</color>
     <color name="colorPressed">#00B0FF</color>
+    <color name="lavanda">#978EEB</color>
+    <color name="azul_oscuro">#4A4FD3</color>
+    <color name="gris_claro">#5e5e5e</color>
 </resources>
