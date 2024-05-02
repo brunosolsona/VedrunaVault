@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UpdateData"
-    android:background="@color/lavanda">
+    android:background="@drawable/gradient">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -16,8 +16,8 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.027"
-        app:srcCompat="@drawable/ic_launcher_round"
+        app:layout_constraintVertical_bias="0.057"
+        app:srcCompat="@mipmap/hola"
         tools:ignore="MissingConstraints" />
 
     <TextView
