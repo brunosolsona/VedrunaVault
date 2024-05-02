@@ -26,7 +26,7 @@
         android:layout_height="88dp"
         android:fontFamily="@font/facebook"
         android:text="Edita tu Contraseña"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textAlignment="center"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"

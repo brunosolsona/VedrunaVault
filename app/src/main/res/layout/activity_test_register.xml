@@ -17,7 +17,7 @@
         android:fontFamily="@font/facebook"
         android:text="Registro"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/usernameContainer"
         app:layout_constraintEnd_toEndOf="parent"

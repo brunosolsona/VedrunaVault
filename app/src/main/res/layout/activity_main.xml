@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/facebook"
         android:text="VedrunaVault"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/Login"
         app:layout_constraintEnd_toEndOf="parent"
